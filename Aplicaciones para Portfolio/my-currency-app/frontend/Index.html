@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora de Comisiones y Conversor de Monedas</title>
+
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<br>
+<body>
+<h1>Calculadora de Comisiones y Conversor de Monedas</h1>
+<div class="calculator-container">
+  <div class="calculator">
+    <h2>Conversor de Monedas</h2>
+<br>
+    <form id="conversor-form">
+      <label for="moneda-local">Moneda Local:</label>
+      <select id="moneda-local">
+        <option value="USD">USD</option>
+        <option value="CAD">CAD</option>
+        <option value="MXN">MXN</option>
+        <option value="CRC">CRC</option>
+        <option value="GTQ">GTQ</option>
+        <option value="HNL">HNL</option>
+        <option value="NIO">NIO</option>
+        <option value="PAB">PAB</option>
+        <option value="SVC">SVC</option>
+        <option value="ARS">ARS</option>
+        <option value="BOB">BOB</option>
+        <option value="BRL">BRL</option>
+        <option value="CLP">CLP</option>
+        <option value="COP">COP</option>
+        <option value="PYG">PYG</option>
+        <option value="PEN">PEN</option>
+        <option value="UYU">UYU</option>
+        <option value="VEF">VEF</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="CHF">CHF</option>
+        <option value="SEK">SEK</option>
+        <option value="NOK">NOK</option>
+        <option value="DKK">DKK</option>
+        <option value="PLN">PLN</option>
+        <option value="CZK">CZK</option>
+        <option value="HUF">HUF</option>
+        <option value="RON">RON</option>
+        <option value="TRY">TRY</option>
+        <option value="RUB">RUB</option>
+        <option value="JPY">JPY</option>
+        <option value="CNY">CNY</option>
+        <option value="HKD">HKD</option>
+        <option value="INR">INR</option>
+        <option value="KRW">KRW</option>
+        <option value="SGD">SGD</option>
+        <option value="THB">THB</option>
+        <option value="IDR">IDR</option>
+        <option value="PHP">PHP</option>
+        <option value="MYR">MYR</option>
+        <option value="VND">VND</option>
+        <option value="AUD">AUD</option>
+        <option value="NZD">NZD</option>
+      </select>
+      <br>
+      <label for="monto-conversor">Monto:</label>
+      <input type="number" id="monto-conversor" name="monto-conversor">
+      <br>
+      <label for="moneda-destino">Moneda a Convertir:</label>
+      <select id="moneda-destino">
+        <option value="USD">USD</option>
+        <option value="CAD">CAD</option>
+        <option value="MXN">MXN</option>
+        <option value="CRC">CRC</option>
+        <option value="GTQ">GTQ</option>
+        <option value="HNL">HNL</option>
+        <option value="NIO">NIO</option>
+        <option value="PAB">PAB</option>
+        <option value="SVC">SVC</option>
+        <option value="ARS">ARS</option>
+        <option value="BOB">BOB</option>
+        <option value="BRL">BRL</option>
+        <option value="CLP">CLP</option>
+        <option value="COP">COP</option>
+        <option value="PYG">PYG</option>
+        <option value="PEN">PEN</option>
+        <option value="UYU">UYU</option>
+        <option value="VEF">VEF</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="CHF">CHF</option>
+        <option value="SEK">SEK</option>
+        <option value="NOK">NOK</option>
+        <option value="DKK">DKK</option>
+        <option value="PLN">PLN</option>
+        <option value="CZK">CZK</option>
+        <option value="HUF">HUF</option>
+        <option value="RON">RON</option>
+        <option value="TRY">TRY</option>
+        <option value="RUB">RUB</option>
+        <option value="JPY">JPY</option>
+        <option value="CNY">CNY</option>
+        <option value="HKD">HKD</option>
+        <option value="INR">INR</option>
+        <option value="KRW">KRW</option>
+        <option value="SGD">SGD</option>
+        <option value="THB">THB</option>
+        <option value="IDR">IDR</option>
+        <option value="PHP">PHP</option>
+        <option value="MYR">MYR</option>
+        <option value="VND">VND</option>
+        <option value="AUD">AUD</option>
+        <option value="NZD">NZD</option>
+      </select>
+      <br>
+      <br>
+      <br>
+      <br>
+      <button type="submit">Convertir</button>
+    </form>
+    <div id="resultado-conversor"></div>
+  </div>
+  <div class="calculator">
+    <h2>Calculadora de Comisiones</h2>
+    <div>
+      <label for="monto-comision">Monto a Cargar:</label>
+      <input type="number" id="monto-comision" name="monto-comision">
+      <br>
+      <br>
+      <button type="submit">Calcular Comisión</button>
+    </div>
+    <div id="resultado-comision">
+      <p>Monto en Dólares: <span id="monto-dolares"></span></p>
+      <p>Comisión: <span id="comision"></span></p>
+    </div>
+  </div>
+</div>
+
+<a href="https://paypal.me/belakiss?country.x=AR&locale.x=es_XC" target="_blank">
+    <button id="donate-button" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer;">Donate</button>
+  </a>
+
+<footer>
+    <p style="text-align: center; font-weight: bold; color: #ff00ff;">Desarrollado por RoxDev</p>
+    <p style="text-align: center;">LinkedIn: <a href="https://www.linkedin.com/in/roxdevs/">RoxDev</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
